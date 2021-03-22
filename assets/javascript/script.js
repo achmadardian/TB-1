@@ -4,8 +4,8 @@ let weather = {
     fetch("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&appid=" + this.apiKey + "&lang=id")
       .then((response) => {
         if (!response.ok) {
-          alert("No weather found.");
-          throw new Error("No weather found.");
+          alert("Pastikan nama kota atau negara benar.");
+          throw new Error("Pastikan nama kota atau negara benar.");
         }
         return response.json();
       })
